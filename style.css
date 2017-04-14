@@ -1,0 +1,30 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, a:link, a:visited {
+  color: #2c2d30;
+  text-decoration: none;
+}
+
+div.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0,0,0,.05);
+  border-style: double;
+}
+
+input[type=radio] {
+  display: none;
+}
