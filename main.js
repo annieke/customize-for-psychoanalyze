@@ -138,7 +138,54 @@ $('#submit').on('click', function(e) {
   let choices = $("input[type='radio']:checked").map(function(i, radio) {
     return $(radio).val();
   }).toArray();
-  // now you have an choices = ["valueofradiobox1", "valueofradiobox2", "valueofradiobox2"]
-  // you'll need to do some calculations with this
-  // a naive approach would be to just choose the most common option - seems reasonable
+  if (choices.length < 5) $('#error').css({"display": "inline"});
+
+  let choiceMap = {};
+  let mostFreq = choices[0], maxCount = 1;
+  for (let i = 0; i < choices.length; i++) {
+    let choice = choices[i];
+    if (choiceMap[choice] == null) choiceMap[choice] = 1;
+    else choiceMap[choice]++;
+
+    if (choiceMap[choice] > maxCount) {
+      mostFreq = choice;
+      maxCount = choiceMap[choice];
+    }
+  }
+
+  switch (mostFreq) {
+    case "meme":
+      $('#meme').css({"display": "inline"});
+      $('#meme').siblings().css({"display": "none"});
+      break;
+    case "what":
+      $('#what').css({"display": "inline"});
+      $('#what').siblings().css({"display": "none"});
+      break;
+    case "cliche":
+      $('#cliche').css({"display": "inline"});
+      $('#cliche').siblings().css({"display": "none"});
+      break;
+    case "rebel":
+      $('#rebel').css({"display": "inline"});
+      $('#rebel').siblings().css({"display": "none"});
+      break;
+    case "old":
+      $('#old').css({"display": "inline"});
+      $('#old').siblings().css({"display": "none"});
+      break;
+    case "lazy":
+      $('#lazy').css({"display": "inline"});
+      $('#lazy').siblings().css({"display": "none"});
+      break;
+    default:
+      $('#error').css({"display": "inline"});
+      $('#error').siblings().css({"display": "none"});
+      break;
+  }
+  $('#modal').css({"display": "block"});
+});
+
+$('#close').on('click', function(e) {
+  $('#modal').css({"display": "none"});
 });
