@@ -139,51 +139,53 @@ $('#submit').on('click', function(e) {
     return $(radio).val();
   }).toArray();
   if (choices.length < 5) $('#error').css({"display": "inline"});
+  else {
+    let choiceMap = {};
+    let mostFreq = choices[0], maxCount = 1;
+    for (let i = 0; i < choices.length; i++) {
+      let choice = choices[i];
+      if (choiceMap[choice] == null) choiceMap[choice] = 1;
+      else choiceMap[choice]++;
 
-  let choiceMap = {};
-  let mostFreq = choices[0], maxCount = 1;
-  for (let i = 0; i < choices.length; i++) {
-    let choice = choices[i];
-    if (choiceMap[choice] == null) choiceMap[choice] = 1;
-    else choiceMap[choice]++;
+      if (choiceMap[choice] > maxCount) {
+        mostFreq = choice;
+        maxCount = choiceMap[choice];
+      }
+    }
 
-    if (choiceMap[choice] > maxCount) {
-      mostFreq = choice;
-      maxCount = choiceMap[choice];
+    switch (mostFreq) {
+      case "meme":
+        $('#meme').css({"display": "flex"});
+        $('#meme').siblings().css({"display": "none"});
+        break;
+      case "what":
+        $('#what').css({"display": "flex"});
+        $('#what').siblings().css({"display": "none"});
+        break;
+      case "cliche":
+        $('#cliche').css({"display": "flex"});
+        $('#cliche').siblings().css({"display": "none"});
+        break;
+      case "rebel":
+        $('#rebel').css({"display": "flex"});
+        $('#rebel').siblings().css({"display": "none"});
+        break;
+      case "old":
+        $('#old').css({"display": "flex"});
+        $('#old').siblings().css({"display": "none"});
+        break;
+      case "lazy":
+        $('#lazy').css({"display": "flex"});
+        $('#lazy').siblings().css({"display": "none"});
+        break;
+      default:
+        $('#error').css({"display": "flex"});
+        $('#error').siblings().css({"display": "none"});
+        break;
     }
   }
 
-  switch (mostFreq) {
-    case "meme":
-      $('#meme').css({"display": "inline"});
-      $('#meme').siblings().css({"display": "none"});
-      break;
-    case "what":
-      $('#what').css({"display": "inline"});
-      $('#what').siblings().css({"display": "none"});
-      break;
-    case "cliche":
-      $('#cliche').css({"display": "inline"});
-      $('#cliche').siblings().css({"display": "none"});
-      break;
-    case "rebel":
-      $('#rebel').css({"display": "inline"});
-      $('#rebel').siblings().css({"display": "none"});
-      break;
-    case "old":
-      $('#old').css({"display": "inline"});
-      $('#old').siblings().css({"display": "none"});
-      break;
-    case "lazy":
-      $('#lazy').css({"display": "inline"});
-      $('#lazy').siblings().css({"display": "none"});
-      break;
-    default:
-      $('#error').css({"display": "inline"});
-      $('#error').siblings().css({"display": "none"});
-      break;
-  }
-  $('#modal').css({"display": "block"});
+  $('#modal').css({"display": "flex"});
 });
 
 $('#close').on('click', function(e) {

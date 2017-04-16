@@ -201,6 +201,8 @@ input[type=radio] {
 .modal {
   display: none;
   position: fixed;
+  align-items: center;
+  justify-content: center;
   z-index: 20;
   left: 0;
   top: 0;
@@ -232,8 +234,8 @@ input[type=radio] {
     cursor: pointer;
 }
 
-.result {
-  font-size: 4vh;
+.result-container {
+  font-size: 3vh;
 }
 
 .title {
@@ -244,26 +246,15 @@ input[type=radio] {
   display: none;
 }
 
-#meme {
+.result {
   display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-#what {
-  display: none;
-}
-
-#cliche {
-  display: none;
-}
-
-#rebel {
-  display: none;
-}
-
-#old {
-  display: none;
-}
-
-#lazy {
-  display: none;
+.result > img {
+  height: 30vh;
+  width: auto;
+  padding-top: 2vh;
 }
