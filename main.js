@@ -85,3 +85,50 @@ $('[name="text-align"]').change(function() {
       break;
   }
 });
+
+$('[name="img-border"]').change(function() {
+  switch (this.value) {
+    case "lazy" :
+      $('div.answer').css("border-radius", "0");
+      break;
+    case "cliche" :
+      $('div.answer').css("border-radius", "25px");
+      break;
+    case "rebel" :
+      $('div.answer').css("border-radius", "200px");
+      break;
+    default:
+      break;
+  }
+});
+
+$('[name="font-color"]').change(function() {
+  switch (this.value) {
+    case "meme" :
+      $('body').css("color", 'blue');
+      $('#header').css("color", 'blue');
+      break;
+    case "what" :
+      $('body').css("color", 'white');
+      $('#header').css("color", 'rgb(112,112,112)');
+      break;
+    case "cliche" :
+      $('body').css("color", '#001f3f');
+      $('#header').css("color", '#001f3f');
+      break;
+    case "rebel" :
+      $('body').css("color", '#85144b');
+      $('#header').css("color", '#85144b');
+      break;
+    case "old" :
+      $('body').css("color", '#F012BE');
+      $('#header').css("color", '#F012BE');
+      break;
+    case "lazy" :
+      $('body').css("color", 'rgb(112,112,112)');
+      $('#header').css("color", 'white');
+      break;
+    default:
+      break;
+  }
+});
