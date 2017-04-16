@@ -1,3 +1,4 @@
+/* box shadow inspired by material design */
 html {
   font-size: 16px;
   box-sizing: border-box;
@@ -32,6 +33,11 @@ a, a:hover, a:link, a:visited {
   padding-left: 3vh;
   padding-right: 3vh;
   z-index: 10;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#header h1 {
+  width: 100%;
 }
 
 .quiz {
@@ -60,9 +66,44 @@ a, a:hover, a:link, a:visited {
   justify-content: space-around;
 }
 
+/* shrinking hover effect with inspiration from hover.css repo*/
 .answer {
   width: 30vh;
   height: 20vh;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+div.answer:hover {
+  transform: scale(0.9);
+}
+
+div.answer > label.text {
+  display: flex;
+  min-width: 100%;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vh;
+}
+
+/* modeled after hover.css */
+@keyframes buzz {
+  50% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+.buzzdiv {
+  animation-name: buzz;
+  animation-duration: 0.15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .answer img {
@@ -74,6 +115,26 @@ input[type=radio] {
   display: none;
 }
 
-#no-header {
-  background-color: rgb(112,112,112);
+#comic-sans {
+  font-family: 'Comic Sans MS';
+}
+
+#times {
+  font-family: 'Times';
+}
+
+#amatica {
+  font-family: 'Amatica SC';
+}
+
+#italianno {
+  font-family: 'Italianno';
+}
+
+#unifrakturcook {
+  font-family: 'UnifrakturCook';
+}
+
+#hanalei {
+  font-family: 'Hanalei';
 }

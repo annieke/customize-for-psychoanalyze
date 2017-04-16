@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>psychoanalysis quiz</title>
+    <script src="https://use.fontawesome.com/b276a2e445.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hanalei" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -52,8 +57,9 @@
               </label>
             </div>
 
-            <div class="answer" id="no-header">
+            <div class="answer">
               <label>
+                <img src="img/header6.png">
                 <input type="radio" name="header-image" value="lazy">
               </label>
             </div>
@@ -66,46 +72,46 @@
         <div class="answers">
           <div class="answer-row">
             <div class="answer">
-              <label>
+              <label class="text" id="comic-sans">
                 comic sans
-                <input type="radio" name="header-image" value="meme">
+                <input type="radio" name="font" value="meme">
               </label>
             </div>
 
             <div class="answer">
-              <label>
-                windings
-                <input type="radio" name="header-image" value="what">
+              <label class="text" id="hanalei">
+                hanalei
+                <input type="radio" name="font" value="what">
               </label>
             </div>
 
             <div class="answer">
-              <label>
-                century gothic
-                <input type="radio" name="header-image" value="cliche">
+              <label class="text" id="amatica">
+                amatica
+                <input type="radio" name="font" value="cliche">
               </label>
             </div>
           </div>
 
           <div class="answer-row">
             <div class="answer">
-              <label>
-                graffiti
-                <input type="radio" name="header-image" value="rebel">
+              <label class="text" id="unifrakturcook">
+                unifrakturcook
+                <input type="radio" name="font" value="rebel">
               </label>
             </div>
 
             <div class="answer">
-              <label>
-                arial
-                <input type="radio" name="header-image" value="old">
+              <label class="text" id="italianno">
+                italianno
+                <input type="radio" name="font" value="old">
               </label>
             </div>
 
             <div class="answer">
-              <label>
-                the one right now is fine
-                <input type="radio" name="header-image" value="lazy">
+              <label class="text" id="times">
+                whatever
+                <input type="radio" name="font" value="lazy">
               </label>
             </div>
           </div>
@@ -114,26 +120,104 @@
 
       <div class="question-wrapper">
         <h2>what text alignment do u prefer?</h2>
-        <label>
-          <img src="">
-          <input type="radio" name="text-align" value="">
-        </label>
-        <label>
-          <img src="">
-          <input type="radio" name="text-align" value="">
-        </label>
-        <label>
-          <img src="">
-          <input type="radio" name="text-align" value="">
-        </label>
+
+        <div class="answers">
+          <div class="answer-row">
+            <div class="answer">
+              <label class="text">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+                <input type="radio" name="text-align" value="old">
+              </label>
+            </div>
+
+            <div class="answer">
+              <label class="text">
+                <i class="fa fa-align-center" aria-hidden="true"></i>
+                <input type="radio" name="text-align" value="meme">
+              </label>
+            </div>
+
+            <div class="answer">
+              <label class="text">
+                <i class="fa fa-align-right" aria-hidden="true"></i>
+                <input type="radio" name="text-align" value="what">
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="question-wrapper">
-        <h2>how round do u like ur img borders??</h2>
+        <h2>how round do u like ur div borders??</h2>
+        <div class="answers">
+          <div class="answer-row">
+            <div class="answer">
+              <label>
+                <img src="img/doge.jpg">
+                <input type="radio" name="img-border" value="lazy">
+              </label>
+            </div>
+
+            <div class="answer">
+              <label>
+                <img src="img/doge.jpg">
+                <input type="radio" name="img-border" value="cliche">
+              </label>
+            </div>
+
+            <div class="answer">
+              <label>
+                <img src="img/doge.jpg">
+                <input type="radio" name="img-border" value="rebel">
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="question-wrapper">
         <h2>what color do you want the questions to be?</h2>
+        <div class="answers">
+          <div class="answer-row">
+            <div class="answer">
+              <label class="text">
+                <input type="radio" name="font-color" value="meme">
+              </label>
+            </div>
+
+            <div class="answer">
+              <label class="text">
+                <input type="radio" name="font-color" value="what">
+              </label>
+            </div>
+
+            <div class="answer">
+              <label class="text">
+                <input type="radio" name="font-color" value="cliche">
+              </label>
+            </div>
+          </div>
+
+          <div class="answer-row">
+            <div class="answer">
+              <label class="text">
+                <input type="radio" name="font-color" value="rebel">
+              </label>
+            </div>
+
+            <div class="answer">
+              <label class="text">
+                <input type="radio" name="font-color" value="old">
+              </label>
+            </div>
+
+            <div class="answer">
+              <label class="text">
+                <input type="radio" name="font-color" value="lazy">
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
