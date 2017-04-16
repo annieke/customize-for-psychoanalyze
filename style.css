@@ -175,3 +175,25 @@ input[type=radio] {
 #black {
   background-color: black;
 }
+
+#submit {
+  border: none;
+  font-family: inherit;
+  font-size: 3vh;
+  padding: 3vh;
+  margin-bottom: 3vh;
+  background: #cb4e4e;
+	color: #fff;
+	box-shadow: 0 6px #ab3c3c;
+  border-radius: 5px;
+}
+
+#submit:hover {
+  box-shadow: 0 4px #ab3c3c;
+  top: 2px;
+}
+
+#submit:active {
+  box-shadow: 0 0 #ab3c3c;
+  top: 6px;
+}
