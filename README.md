@@ -12,7 +12,7 @@ So many things are customizable!! Go crazy!!
 
 ![2](/img/2.gif)
 
-The selection animation are also designed to be as annoying as possible, to force out your TRUE PERSONALITY.
+The selection animations are also designed to be as annoying as possible, to force out your TRUE PERSONALITY.
 
 ![3](/img/3.gif)
 
